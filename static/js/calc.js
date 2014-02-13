@@ -115,6 +115,13 @@ $(function() {
     }
   });
 
+  $('#mod').click(function() {
+    if (notLastOp()) {
+      var outputText = $('#output').text() + '%';
+      $('#output').text(outputText);
+    }
+  });
+
   // WRITE CODE HERE for sub,mul,div,mod
 
   $('#sqrt').click(function() {
