@@ -128,13 +128,13 @@ $(function() {
     var outputText = $('#output').text();
     var outputNum = parseFloat(eval(outputText));
     // FIXME
-    var newNum = Math.square(outputNum);
+    var newNum = Math.(outputNum * outputNum);
     $('#output').text(newNum);
   });
 
   $('#equals').click(function() {
     // FIXME
-    var res = Math.equals(outputNum);
+    var res = Math.eval(outputNum);
     $('#output').text(res);
   });
 
