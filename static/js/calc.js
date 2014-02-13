@@ -128,14 +128,16 @@ $(function() {
     var outputText = $('#output').text();
     var outputNum = parseFloat(eval(outputText));
     // FIXME
-    var newNum = Math.(outputNum * outputNum);
+    var newNum =(outputNum * outputNum);
     $('#output').text(newNum);
   });
 
   $('#equals').click(function() {
     // FIXME
-    var res = Math.eval(outputNum);
-    $('#output').text(res);
+    var outputText = $('#output').text();
+    var outputNum = parseFloat(eval(outputText));
+    var newNum = (outputNum);
+    $('#output').text(newNum);
   });
 
   $('#dot').click(function() {
