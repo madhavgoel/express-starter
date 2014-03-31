@@ -29,19 +29,19 @@ $(document).ready(function() {
     ball.y = ball.y + ball.vy;
 
     if (ball.x>=781) {
-      vx = -vx;
+      ball.vx = -ball.vx;
     };
 
     if (ball.x<=21) {
-      vx = -vx;
+      ball.vx = -ball.vx;
     };
 
     if (ball.y<=21) {
-      vy = -vy;
+      ball.vy = -ball.vy;
     };
 
     if (ball.y>=581) {
-      vy = -vy;
+      ball.vy = -ball.vy;
     };
 
     setTimeout(updateGame, 10);
