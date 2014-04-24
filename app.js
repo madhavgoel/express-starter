@@ -48,6 +48,22 @@ app.get('/chain-reaction', function(req, res) {
   res.render('chain-reaction.html', { });
 });
 
+var faa = ["Every US president has worn glasses (just not always in public).", "Salt Lake City has a law against carrying an unwrapped ukulele on the street.", "A snail can have 25,000 teeth.", "No matter where you stand in Michigan, you are never more than 85 miles from a Great Lake.", "No matter where you stand in Michigan, you are never more than 85 miles from a Great Lake.", "It is physically impossible for pigs to look up in the sky."];
+
+app.get('/fact', function(req, res) {
+  res.render('fact.html', {f: faa[Math.floor(Math.random() * 6)]
+    });
+});
+app.get('/facts', function(req, res) {
+  res.render('facts.html', {faa: faa});
+});
+
+app.get('/submit_fact', function(req, res){
+  var inputtext = req.query['fact'];
+  faa.push(inputtext);
+  res.redirect('/facts');
+});
+
 ///////////////////////////////////////////////////////////////////////////////
 // RUN CONFIGURATION                                                         //
 ///////////////////////////////////////////////////////////////////////////////
